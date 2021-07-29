@@ -24,4 +24,4 @@ The repository contains instructions to setup and troubleshoot many servers.
 
 ## How do I configure LSP ?
 
-[Go to LSP documentation](/lsp){ .md-button }
+[Go to LSP documentation](../../lsp/){ .md-button }
