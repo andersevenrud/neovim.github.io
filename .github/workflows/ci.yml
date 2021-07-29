@@ -1,0 +1,25 @@
+name: ci
+on:
+  push:
+    branches:
+      - master
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: sudo add-apt-repository ppa:neovim-ppa/unstable
+      - run: sudo apt install neovim
+      - run: sudo apt-get update
+      - run: pip install mkdocs-material
+      - run: ./build.sh
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
