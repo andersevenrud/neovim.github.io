@@ -4,6 +4,8 @@ This repository cointans the source-code for neovim's website(s).
 
 **This is just a proof of concept**
 
+Automatically deployed here: https://andersevenrud.github.io/neovim.github.io/
+
 ## Installation
 
 ### Dependencies
