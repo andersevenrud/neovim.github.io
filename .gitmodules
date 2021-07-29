@@ -1,0 +1,4 @@
+[submodule "nvim-lspconfig"]
+	path = nvim-lspconfig
+	url = https://github.com/andersevenrud/nvim-lspconfig.git
+	branch = feature/web-docgen

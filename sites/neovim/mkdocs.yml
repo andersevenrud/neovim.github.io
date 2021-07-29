@@ -1,0 +1,74 @@
+site_name: Neovim
+site_url: https://neovim.io/
+repo_url: https://github.com/neovim/neovim
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/images/favicon.ico
+  custom_dir: overrides
+  palette:
+    primary: green
+    accent: green
+  features:
+    - navigation.expand
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+markdown_extensions:
+  - toc
+  - admonition
+  - pymdownx.details
+  - meta
+  - attr_list
+  - sane_lists
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.magiclink
+  - markdown.extensions.extra
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/neovim/neovim
+      name: Github
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/Neovim
+      name: Twitter
+    - icon: fontawesome/brands/discourse
+      link: http://discourse.neovim.io/
+    - icon: fontawesome/solid/comment
+      link: https://app.element.io/#/room/#neovim:matrix.org
+      name: #neovim on irc.libera.chat
+extra_javascript:
+  - assets/jquery.js
+  - assets/sponsors-override.js
+  - assets/sponsors.js
+nav:
+  - Home: index.md
+  - About:
+    - Vision: about/vision.md
+    - Roadmap: about/roadmap.md
+    - Screenshots: about/screenshots.md
+  - News:
+    - news/2021-07-12-newsletter.md
+    - news/2020-10-28-newsletter.md
+    - news/2020-04-14-newsletter.md
+    - news/2019-03-17-newsletter.md
+    - news/2017-12-16-newsletter.md
+    - news/2016-11-01-newsletter.md
+    - news/2015-12-09-newsletter.md
+    - news/2015-04-03-newsletter.md
+    - news/2014-11-07-november-newsletter.md
+    - news/2014-09-06-september-newsletter.md
+    - news/2014-07-04-july-newsletter.md
+    - news/2014-06-06-june-newsletter.md
+    - news/2014-02-22-Back-Neovim-Through-Bountysource.md
+  - Documentation:
+    - General: documentation/general.md
+    - Lua resources: documentation/lua-resources.md
+    - LSP: documentation/lsp.md
+    - Tree-sitter: documentation/treesitter.md
+  - Sponsors: sponsors.md
+  - Development: https://github.com/neovim/neovim
+  - Forum: http://discourse.neovim.io/

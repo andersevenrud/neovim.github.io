@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block announce %}
+  NB: This is an unnoficial clone of neovim.io website.
+{% endblock %}
+
+{% block extrahead %}
+  <style>
+/* Show arrow on external links in tab bar */
+.md-tabs__link[href^="http"]::after,
+.md-nav__link[href^="http"]::after {
+  display: inline-block;
+  font-size: 80%;
+  content: '\2197';
+}
+
+/* Bounty listing styles */
+.sponsors-table {
+  display: block;
+}
+.sponsors-table tbody {
+  display: block;
+}
+.sponsors-table tbody tr {
+  display: block;
+}
+.sponsors-table tbody tr td {
+  display: block;
+}
+  </style>
+{% endblock %}

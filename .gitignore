@@ -1,0 +1,4 @@
+/build
+/sites/*/site
+/sites/lsp/docs
+/sites/lsp/mkdocs.yml

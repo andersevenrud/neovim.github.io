@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+
+{% block tabs %}
+  {{ super() }}
+  <section class="mdx-container" style="padding:2rem 0;">
+    <div class="md-grid md-typeset">
+      <div class="mdx-hero" style="text-align:center">
+        <div class="mdx-hero__content">
+          <h1>Hyperextensible Vim-based text editor</h1>
+          <a
+            class="md-button md-button--primary"
+            href="https://github.com/neovim/neovim/wiki/Installing-Neovim"
+          >
+            Get started
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% block content %}
+  {{ super() }}
+{% endblock %}
