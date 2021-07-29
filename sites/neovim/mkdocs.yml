@@ -1,6 +1,7 @@
 site_name: Neovim
 site_url: https://neovim.io/
 repo_url: https://github.com/neovim/neovim
+edit_uri: ""
 theme:
   name: material
   logo: assets/logo.png
