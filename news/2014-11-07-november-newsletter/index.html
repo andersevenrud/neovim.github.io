@@ -1,0 +1,1471 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://neovim.io/news/2014-11-07-november-newsletter/">
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
+    
+    
+      
+        <title>Newsletter #4 - Thanksvimming Day - Neovim</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ba0d045b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  <style>
+/* Show arrow on external links in tab bar */
+.md-tabs__link[href^="http"]::after,
+.md-nav__link[href^="http"]::after {
+  display: inline-block;
+  font-size: 80%;
+  content: '\2197';
+}
+
+/* Bounty listing styles */
+.sponsors-table {
+  display: block;
+}
+.sponsors-table tbody {
+  display: block;
+}
+.sponsors-table tbody tr {
+  display: block;
+}
+.sponsors-table tbody tr td {
+  display: block;
+}
+  </style>
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="green">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#general-news" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-announce">
+          <div class="md-announce__inner md-grid md-typeset">
+            
+  NB: This is an unnoficial clone of neovim.io website.
+
+          </div>
+        </aside>
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Neovim" class="md-header__button md-logo" aria-label="Neovim" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Neovim
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Newsletter #4 - Thanksvimming Day
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/neovim/neovim/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/vision/" class="md-tabs__link">
+        About
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../2021-07-12-newsletter/" class="md-tabs__link md-tabs__link--active">
+        News
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../documentation/general/" class="md-tabs__link">
+        Documentation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../sponsors/" class="md-tabs__link">
+      Sponsors
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://github.com/neovim/neovim" class="md-tabs__link">
+      Development
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="http://discourse.neovim.io/" class="md-tabs__link">
+      Forum
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Neovim" class="md-nav__button md-logo" aria-label="Neovim" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Neovim
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/neovim/neovim/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        About
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/vision/" class="md-nav__link">
+        Vision
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/roadmap/" class="md-nav__link">
+        Roadmap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/screenshots/" class="md-nav__link">
+        Screenshots
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        News
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="News" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          News
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2021-07-12-newsletter/" class="md-nav__link">
+        Neovim News #11 - The Christmas Issue
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2020-10-28-newsletter/" class="md-nav__link">
+        Newsletter #10 - Neovim v0.4.4
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2020-04-14-newsletter/" class="md-nav__link">
+        Newsletter #9 - Three's company
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2019-03-17-newsletter/" class="md-nav__link">
+        Google Summer of Code 2019
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2017-12-16-newsletter/" class="md-nav__link">
+        Newsletter #8 - Open up the Windows
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2016-11-01-newsletter/" class="md-nav__link">
+        Newsletter #7 - Summer of Road
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2015-12-09-newsletter/" class="md-nav__link">
+        Newsletter #6 - Ship it!
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2015-04-03-newsletter/" class="md-nav__link">
+        Newsletter #5 - Out of the Box
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Newsletter #4 - Thanksvimming Day
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Newsletter #4 - Thanksvimming Day
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-news" class="md-nav__link">
+    General News
+  </a>
+  
+    <nav class="md-nav" aria-label="General News">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show-off-your-love" class="md-nav__link">
+    Show off your Love
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seeing-stars" class="md-nav__link">
+    Seeing Stars
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floobits-approved" class="md-nav__link">
+    Floobits Approved
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vimconf-2014-in-japan" class="md-nav__link">
+    VimConf 2014 in Japan
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-news" class="md-nav__link">
+    Development News
+  </a>
+  
+    <nav class="md-nav" aria-label="Development News">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#refactored-plugin-system" class="md-nav__link">
+    Refactored Plugin System
+  </a>
+  
+    <nav class="md-nav" aria-label="Refactored Plugin System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    Note
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#re-enabling-iconv" class="md-nav__link">
+    Re-enabling iconv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-vim-specific-integer-types-part-2" class="md-nav__link">
+    Removing Vim Specific Integer Types (Part 2)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viml-lua-and-vim-bug-reports" class="md-nav__link">
+    VimL -&gt; Lua and Vim Bug Reports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upstream-vim-patches" class="md-nav__link">
+    Upstream Vim Patches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legacy-test-migration-part-1" class="md-nav__link">
+    Legacy Test Migration Part 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes" class="md-nav__link">
+    Bug Fixes
+  </a>
+  
+    <nav class="md-nav" aria-label="Bug Fixes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#job-activity-bug-fix" class="md-nav__link">
+    Job Activity Bug Fix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signs-bug-fix" class="md-nav__link">
+    Signs Bug Fix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homebrewed-neovim" class="md-nav__link">
+    Homebrewed Neovim
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#marvim-the-bot" class="md-nav__link">
+    Marvim the Bot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduced-clang-analyzer-warnings" class="md-nav__link">
+    Reduced Clang Analyzer Warnings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helping-out" class="md-nav__link">
+    Helping Out
+  </a>
+  
+    <nav class="md-nav" aria-label="Helping Out">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#donating" class="md-nav__link">
+    Donating
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    Contributing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thats-a-wrap" class="md-nav__link">
+    That's a Wrap
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2014-09-06-september-newsletter/" class="md-nav__link">
+        Newsletter #3 - Better Late than Never
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2014-07-04-july-newsletter/" class="md-nav__link">
+        Newsletter #2 - Perchance to Dream
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2014-06-06-june-newsletter/" class="md-nav__link">
+        Newsletter #1 - A New Hope
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2014-02-22-Back-Neovim-Through-Bountysource/" class="md-nav__link">
+        Back Neovim Through Bountysource
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Documentation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Documentation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/general/" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/lua-resources/" class="md-nav__link">
+        Lua resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/lsp/" class="md-nav__link">
+        LSP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/treesitter/" class="md-nav__link">
+        Tree-sitter
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sponsors/" class="md-nav__link">
+        Sponsors
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/neovim/neovim" class="md-nav__link">
+        Development
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://discourse.neovim.io/" class="md-nav__link">
+        Forum
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-news" class="md-nav__link">
+    General News
+  </a>
+  
+    <nav class="md-nav" aria-label="General News">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show-off-your-love" class="md-nav__link">
+    Show off your Love
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seeing-stars" class="md-nav__link">
+    Seeing Stars
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floobits-approved" class="md-nav__link">
+    Floobits Approved
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vimconf-2014-in-japan" class="md-nav__link">
+    VimConf 2014 in Japan
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-news" class="md-nav__link">
+    Development News
+  </a>
+  
+    <nav class="md-nav" aria-label="Development News">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#refactored-plugin-system" class="md-nav__link">
+    Refactored Plugin System
+  </a>
+  
+    <nav class="md-nav" aria-label="Refactored Plugin System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    Note
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#re-enabling-iconv" class="md-nav__link">
+    Re-enabling iconv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-vim-specific-integer-types-part-2" class="md-nav__link">
+    Removing Vim Specific Integer Types (Part 2)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viml-lua-and-vim-bug-reports" class="md-nav__link">
+    VimL -&gt; Lua and Vim Bug Reports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upstream-vim-patches" class="md-nav__link">
+    Upstream Vim Patches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legacy-test-migration-part-1" class="md-nav__link">
+    Legacy Test Migration Part 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes" class="md-nav__link">
+    Bug Fixes
+  </a>
+  
+    <nav class="md-nav" aria-label="Bug Fixes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#job-activity-bug-fix" class="md-nav__link">
+    Job Activity Bug Fix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signs-bug-fix" class="md-nav__link">
+    Signs Bug Fix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homebrewed-neovim" class="md-nav__link">
+    Homebrewed Neovim
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#marvim-the-bot" class="md-nav__link">
+    Marvim the Bot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduced-clang-analyzer-warnings" class="md-nav__link">
+    Reduced Clang Analyzer Warnings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helping-out" class="md-nav__link">
+    Helping Out
+  </a>
+  
+    <nav class="md-nav" aria-label="Helping Out">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#donating" class="md-nav__link">
+    Donating
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    Contributing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thats-a-wrap" class="md-nav__link">
+    That's a Wrap
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/neovim/neovim/edit/master/docs/news/2014-11-07-november-newsletter.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Newsletter #4 - Thanksvimming Day</h1>
+                
+                <blockquote>
+<p>The way to "win" at open source is to be consistent and steady.</p>
+</blockquote>
+<p>Welcome to the fourth newsletter for Neovim, the project that aims to overhaul
+the Vim code base. It also hopes to provide <a href="http://en.wikipedia.org/wiki/Out_of_the_box_feature">out of the box features</a> yet a
+more powerful interface for extending the editor.</p>
+<h2 id="general-news">General News</h2>
+<h3 id="show-off-your-love">Show off your Love</h3>
+<p>You can now add a Neovim sticker to your laptop by heading over to the <a href="http://www.unixstickers.com/tag/neovim">Neovim
+section</a> of <a href="http://www.unixstickers.com/">Unixstickers</a>.</p>
+<p>Unixstickers will be donating a portion of the profits to <a href="http://iccf-holland.org/">ICCF
+Holland</a> in support of Bram Moolenar's work on Vim.</p>
+<h3 id="seeing-stars">Seeing Stars</h3>
+<p>The last newsletter detailed how Neovim reached 1,000 issues/pull requests on
+its GitHub repository.</p>
+<p>During the last two months, the repo reached over <a href="https://github.com/neovim/neovim/stargazers">10,000
+stargazers</a> on Github. The repository also just tipped over the
+<a href="https://github.com/neovim/neovim/graphs/contributors">100 person contributor</a> mark.</p>
+<h3 id="floobits-approved">Floobits Approved</h3>
+<p><a href="https://floobits.com/">Floobits</a>, a service that integrates with editors to make it
+easier to write code together, has deprecated its Vim plugin in favor of a
+plugin for Neovim.</p>
+<p>Already Floobits says that the new plugin "has fewer bugs and performs better"
+than their previous plugin. Read their entire <a href="https://news.floobits.com/2014/11/04/floobits-now-supports-neovim/">write up</a> to learn
+more about their thoughts or view <a href="https://github.com/Floobits/floobits-neovim">the repository</a> to see the
+code.</p>
+<h3 id="vimconf-2014-in-japan">VimConf 2014 in Japan</h3>
+<p><a href="http://vim-jp.org/">Vim-jp</a> held their annual <a href="http://vimconf.vim-jp.org/">VimConf conference</a> over
+the weekend of November 8th in Tokyo, Japan.</p>
+<p>@Shougo, creator of many Vim plugins, gave a talk about his experience and
+perspective of Neovim so far. Check out the <a href="http://www.slideshare.net/Shougo/lets-talk-about-neovim">English version of the
+slides</a> to read his thoughts.</p>
+<h2 id="development-news">Development News</h2>
+<h3 id="refactored-plugin-system">Refactored Plugin System</h3>
+<p>@tarruda finished <a href="https://github.com/neovim/neovim/pull/1454">his pull request</a> that did two things. It gave the
+initial implementation of remote plugins which are going to be plugins that
+run in external processes and communicate to Nvim through msgpack-rpc. Details
+can be found in <a href="http://neovim.io/doc/user/remote_plugin.html#remote-plugin"><code>:h remote-plugin</code></a>.</p>
+<p>The second change is an improvement to the existing provider infrastructure to
+allow providers to be implemented in VimScript. This gives more flexibility as
+previously providers needed to be implemented using msgpack. More details for
+this can be found in the <a href="http://neovim.io/doc/user/nvim_provider.html#nvim-provider"><code>:h nvim-provider</code></a>.</p>
+<h4 id="note">Note</h4>
+<blockquote>
+<p>If you run into issues with this new plugin system, it might be caused by
+stale files from old builds and/or old configurations.</p>
+<p>See <a href="https://github.com/neovim/neovim/issues/1501#issuecomment-63765917">this comment</a> and these two subsequent issues for more
+details: <a href="https://github.com/neovim/neovim/issues/1415">1</a> and <a href="https://github.com/neovim/neovim/issues/1459">2</a>.</p>
+</blockquote>
+<h3 id="re-enabling-iconv">Re-enabling iconv</h3>
+<p><a href="http://www.gnu.org/software/libiconv/">iconv</a> is a library "for use on systems which don't have one, or
+whose implementation cannot convert from/to Unicode."</p>
+<p>During the migration to CMake, the macro <code>USE_ICONV</code> was missed which was used
+to indicate such a system. Thus Neovim never triggered specific encoding
+conversions when needed.</p>
+<p>@aktau has an excellent write up called <a href="http://www.aktau.be/2014/11/04/neovim-input-encoding-and-you/">Neovim: input encoding and
+you</a> which discusses input encoding in detail and as well as how he
+discovered this issue. He created a <a href="https://github.com/neovim/neovim/pull/1370">pull request</a> which fixed this
+and it has been merged into the master branch.</p>
+<h3 id="removing-vim-specific-integer-types-part-2">Removing Vim Specific Integer Types (Part 2)</h3>
+<p>@elmart has returned to continue his past work (<a href="https://github.com/neovim/neovim/pull/656">1</a>,
+<a href="https://github.com/neovim/neovim/pull/757">2</a>) with removing Vim specific integer types in this <a href="https://github.com/neovim/neovim/pull/1340">pull
+request</a>. This topic was first covered in the very <a href="http://neovim.io/news/2014/june/">first
+newsletter</a> back in June.</p>
+<p>The merging of this latest pull request chips away at the long standing
+refactoring goal by @tarruda to <a href="https://github.com/neovim/neovim/issues/459">remove all project specific
+types</a>.</p>
+<h3 id="viml-lua-and-vim-bug-reports">VimL -&gt; Lua and Vim Bug Reports</h3>
+<p>@ZyX-I is still hard at work on advancing <a href="https://github.com/neovim/neovim/pull/243">his VimL to Lua
+translator</a>. More than <strong>80%</strong> of Vim commands have been
+implemented in the parser.</p>
+<p>In the process of writing the translator, he has come across various bugs
+(<a href="https://groups.google.com/forum/#!msg/vim_dev/IkKbzECTX44/SXNDmu0gDOcJ">1</a>, <a href="https://groups.google.com/forum/#!msg/vim_dev/NVmW5hRfpyo/Ny2VZ_CN478J">2</a>, <a href="https://groups.google.com/forum/#!msg/vim_dev/s9ONFXMz0RQ/b3cptV0ZP8MJ">3</a>, <a href="https://groups.google.com/forum/#!msg/vim_dev/-IYtF6S4EjM/AHiXDwQH0t4J">4</a>, <a href="https://groups.google.com/forum/#!msg/vim_dev/exZH82jp5ww/3lHGDe8c--kJ">5</a>). He continues
+to report them to the <a href="https://groups.google.com/forum/#!forum/vim_dev">vim_dev</a> mailing list as well as contributing
+patches when possible.</p>
+<h3 id="upstream-vim-patches">Upstream Vim Patches</h3>
+<p>Since the last newsletter, a great number of Vim patches have been merged into
+Neovim.</p>
+<p>This work has been done by @splinterofchaos, @Shougo, @mhinz, @NOLFXceptMe,
+@atwupack, @dkns (sorted by most number of patches ported).</p>
+<p>You can view the complete status of the Vim patches within the autogenerated
+<a href="http://neovim.io/doc/reports/vimpatch/">Vim Patch Report</a> on the Neovim website.</p>
+<h3 id="legacy-test-migration-part-1">Legacy Test Migration Part 1</h3>
+<p>After @tarruda opened up <a href="https://github.com/neovim/neovim/issues/1286">a master issue</a> discussing legacy test
+migration, the <a href="https://github.com/neovim/neovim/pull/1318">first legacy test</a> was migrated over by @nate00.
+@rainerborene then followed up with a <a href="https://github.com/neovim/neovim/pull/1328">batch of conversions</a> and
+is already working on the <a href="https://github.com/neovim/neovim/pull/1420">next batch</a>.</p>
+<p>Previously the <a href="https://github.com/neovim/neovim/tree/ef08a2c0df7f6bda1d507f41a46d1ab3069d1b8f/src/nvim/testdir">legacy tests</a> were ran by launching an instance of
+Vim with the flag <code>-s &lt;test file&gt;</code> which enables <a href="http://vimdoc.sourceforge.net/htmldoc/starting.html#-s">silent mode</a>.
+This mode reads the lines as if you had typed them. The tests can be ran on
+<code>nvim</code> by running <code>make oldtest</code>.</p>
+<p>The migrations (example test: <a href="https://github.com/neovim/neovim/blob/da51dc9cf202772f60bd2da975dbef257bd9237c/src/nvim/testdir/test21.in">before</a> and <a href="https://github.com/neovim/neovim/blob/168a46fd316812ad0393101cf65eef1442d2605a/test/functional/legacy/021_control_wi_spec.lua">after</a>)
+are made possible because they are now communicating to Neovim through
+msgpack-rpc; the same mechanism that UI's will be using when communicating.</p>
+<h3 id="bug-fixes">Bug Fixes</h3>
+<h4 id="job-activity-bug-fix">Job Activity Bug Fix</h4>
+<p>@splinterofchaos happened to <a href="https://github.com/neovim/neovim/issues/1243">come across a bug</a> in which a job
+activity's output may become corrupted. The rstream structure
+could contain incomplete lines if the buffer fills up before reaching a <code>'\n'</code>
+character.</p>
+<p>To remedy this @splinterofchaos added <a href="https://github.com/neovim/neovim/pull/1255">logic at the API level</a> to find a
+new-line character and return it as well. The end result is that a job's
+activity is now storing <code>stdout</code> in a list instead of a string. If your code is
+utilizing a job, you might want to address this.</p>
+<h4 id="signs-bug-fix">Signs Bug Fix</h4>
+<p>@akkartik uncovered a bug with the <a href="http://vimdoc.sourceforge.net/htmldoc/sign.html">sign functionality</a> of Nvim.</p>
+<p>The sign feature can be used to place an indicator on a given line of a buffer.
+It will show up on the left side of the editor window. This is used for
+debuggers, syntax linters, and various other plugins.</p>
+<p>The bug caused nvim to not remove signs placed across multiple buffers when
+using the <a href="http://vimdoc.sourceforge.net/htmldoc/sign.html#E159"><code>:sign unplace</code></a> command.</p>
+<p>@akkartik created a <a href="https://github.com/neovim/neovim/pull/1342">pull request</a> to fix this and also went ahead and
+updated the <a href="https://github.com/neovim/neovim/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> file to include more <a href="https://github.com/neovim/neovim/pull/1346">guidance on
+cosmetic changes</a>.</p>
+<h3 id="homebrewed-neovim">Homebrewed Neovim</h3>
+<p>Neovim has moved its <a href="http://brew.sh/">homebrew</a> formula into its own repository
+in the organization to make it easy to install using a tap instead of just a
+formula. You can install it now with the following:</p>
+<p _="%" endhighlight="endhighlight">{% highlight bash %}
+$ brew tap neovim/homebrew-neovim
+$ brew install --HEAD neovim</p>
+<p>To see more, just head over to the new repository:
+<a href="https://github.com/neovim/homebrew-neovim">neovim/homebrew-neovim</a>. @colinrymer originally <a href="https://github.com/neovim/neovim/issues/1401">suggested the
+improvement</a> and @xu-cheng helped the testing and
+migration.</p>
+<h3 id="marvim-the-bot">Marvim the Bot</h3>
+<p>@Marvim, the Neovim bot that was started by @stefan991, has seen some great
+improvements by @fwalch.</p>
+<p>These improvements include:</p>
+<ul>
+<li>Automatic generation of <a href="https://github.com/neovim/bot-ci/pull/25">nightly builds of Neovim</a></li>
+<li>Automatically <a href="https://github.com/neovim/bot-ci/pull/28">assigning labels to pull requests</a></li>
+<li>Ability to <a href="https://github.com/neovim/bot-ci/pull/24">manually trigger a Travis build</a> through the
+  command line.</li>
+</ul>
+<h3 id="reduced-clang-analyzer-warnings">Reduced Clang Analyzer Warnings</h3>
+<p>@elmart has been hard at work reducing the number of warnings from the <a href="http://clang-analyzer.llvm.org/">Clang
+Static Analyzer</a>. He did so in four different pull requests
+(<a href="https://github.com/neovim/neovim/pull/1389">1</a>, <a href="https://github.com/neovim/neovim/pull/1431">2</a>, <a href="https://github.com/neovim/neovim/pull/1460">3</a>, <a href="https://github.com/neovim/neovim/pull/1478">4</a>).</p>
+<h2 id="helping-out">Helping Out</h2>
+<h3 id="donating">Donating</h3>
+<p>If you'd like to help support development, you may donate using Bitcoins here:
+<code>1Evu6wPrzjsjrNPdCYbHy3HT6ry2EzXFyQ</code> or back the team on the <a href="https://www.bountysource.com/teams/neovim">Neovim
+Bountysource</a> page.</p>
+<h3 id="contributing">Contributing</h3>
+<p>If you are an experienced developer or inexperienced but wanting to learn, visit
+the <a href="https://github.com/neovim/neovim/">GitHub repo</a> and check out the <a href="https://github.com/neovim/neovim/blob/master/README.md">README</a>,
+<a href="https://github.com/neovim/neovim/blob/master/CONTRIBUTING.md">CONTRIBUTING</a> guide, and finally the <a href="https://github.com/neovim/neovim/wiki">Wiki</a> to learn
+more.</p>
+<p>There are plenty of opportunities to help out and plenty of things to do.</p>
+<h2 id="thats-a-wrap">That's a Wrap</h2>
+<p>Do you have any feedback or suggestions regarding this newsletter? Feel free to
+reach out through the <a href="https://twitter.com/Neovim">Neovim Twitter</a>.</p>
+<p>This newsletter cannot cover all of the contributions and support of the
+community. Thanks to all of the other contributors that have helped in some way
+during the last two months.</p>
+<p>Be sure to subscribe to the [RSS feed][info-rss] to stay up-to-date on what
+is happening in the Neovim world. The next newsletter will be released in
+roughly two months near the beginning months of the next year.</p>
+<p>Until next time. <code>:wq</code></p>
+<p>[info-rss]: {{ site.news.feed }}</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../2015-04-03-newsletter/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Newsletter #5 - Out of the Box" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Newsletter #5 - Out of the Box
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../2014-09-06-september-newsletter/" class="md-footer__link md-footer__link--next" aria-label="Next: Newsletter #3 - Better Late than Never" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Newsletter #3 - Better Late than Never
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://github.com/neovim/neovim" target="_blank" rel="noopener" title="Github" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://twitter.com/Neovim" target="_blank" rel="noopener" title="Twitter" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="http://discourse.neovim.io/" target="_blank" rel="noopener" title="discourse.neovim.io" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M225.9 32C103.3 32 0 130.5 0 252.1 0 256 .1 480 .1 480l225.8-.2c122.7 0 222.1-102.3 222.1-223.9C448 134.3 348.6 32 225.9 32zM224 384c-19.4 0-37.9-4.3-54.4-12.1L88.5 392l22.9-75c-9.8-18.1-15.4-38.9-15.4-61 0-70.7 57.3-128 128-128s128 57.3 128 128-57.3 128-128 128z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://app.element.io/#/room/#neovim:matrix.org" target="_blank" rel="noopener" title="app.element.io" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.716f8af4.min.js"></script>
+      
+        <script src="../../assets/jquery.js"></script>
+      
+        <script src="../../assets/sponsors-override.js"></script>
+      
+        <script src="../../assets/sponsors.js"></script>
+      
+    
+  </body>
+</html>
