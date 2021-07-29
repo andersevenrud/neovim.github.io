@@ -92,12 +92,12 @@ Thanks to the original fundraiser sponsors!
 
 <div class="fundraisers" markdown>
   <div class="fundraiser-row" markdown>
-[![Digital Ocean](/images/sponsors/digital-ocean@2x.png)](https://digitalocean.com/)
-[![Bountysource](/images/sponsors/bountysource@2x.png)](https://bountysource.com/)
+[![Digital Ocean](../images/sponsors/digital-ocean@2x.png)](https://digitalocean.com/)
+[![Bountysource](../images/sponsors/bountysource@2x.png)](https://bountysource.com/)
   </div>
 
   <div class="fundraiser-row" markdown>
-[![Superjer](/images/sponsors/superjer@2x.png)](http://superjer.com/)
-[![Ryan Durk](/images/sponsors/ryan-durk@2x.png)](http://ryandurk.com/)
+[![Superjer](../images/sponsors/superjer@2x.png)](http://superjer.com/)
+[![Ryan Durk](../images/sponsors/ryan-durk@2x.png)](http://ryandurk.com/)
   </div>
 </div>
