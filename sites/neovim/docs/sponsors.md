@@ -22,68 +22,6 @@ Replace `$NAME` by your Bountysource display name as shown in the sponsor list.
 
 ## Sponsors list
 
-<style>
-
-.sponsors-table {
-  display: block;
-}
-.sponsors-table tbody {
-  display: block;
-}
-.sponsors-table tbody tr {
-  display: flex;
-  align-items: center;
-}
-.sponsors-table tbody tr td {
-  display: block;
-  padding: 0.25rem;
-}
-
-.sponsor h3 {
-  margin: 0;
-  padding: 0;
-  font-size: inherit;
-}
-.sponsor-image {
-  flex-shrink: 0;
-}
-.sponsor-image img {
-  width: 2rem;
-  height: 2rem;
-  display: block;
-}
-.sponsor-name {
-  flex-grow: 1;
-}
-.sponsor-amount h3 {
-  font-weight: bold;
-}
-
-@media (min-width: 640px) {
-  .sponsors-table tbody {
-    display: flex;
-    flex-wrap: wrap;
-    white-space: nowrap;
-  }
-  .sponsors-table tbody tr {
-    flex: 1 1 50%;
-  }
-}
-
-.fundraiser-row > p {
-  display: flex;
-}
-.fundraiser-row > p > a {
-  display: flex;
-  flex: 1 1 50%;
-  justify-content: center;
-  align-items: center;
-}
-.fundraiser-row > p > a > img {
-  width: 90%;
-}
-</style>
-
 <table class="sponsors-table" id="sponsors-table"></table>
 
 ## Fundraiser sponsors
